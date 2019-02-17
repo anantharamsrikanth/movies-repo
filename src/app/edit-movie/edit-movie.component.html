@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Edit Movie</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" formControlName="Title" name="Title" class="form-control" id="title">
+          </div>
+
+          <div class="form-group">
+            <label for="year">Year:</label>
+            <input formControlName="Year" name="Year" class="form-control" id="year">
+          </div>
+
+          <div class="form-group">
+            <label for="director">imdbID:</label>
+            <input formControlName="imdbID" name="Director" class="form-control" id="director">
+          </div>
+          <!-- <div class="form-group">
+      <label for="genre">Genre:</label>
+      <input formControlName="Genre" name="Genre" class="form-control" id="genre" required >
+    </div> -->
+          <div class="form-group">
+            <label for="runtime">Type:</label>
+            <input formControlName="Type" name="Poster" class="form-control" id="runtime">
+          </div>
+
+          <button class="btn btn-success" type="submit" data-dismiss="modal" (click)="update(editmovie.imdbID,editForm.value)">Update</button>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

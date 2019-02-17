@@ -1,0 +1,18 @@
+<h3>
+  List of Movies:</h3>
+
+<h1>{{data}}</h1>
+<div class="card" *ngFor="let movie of movies; let i = index">
+  <div class="card-header">
+    <img class="card-img-top" src="{{movie.Poster}}" alt="Card image cap">
+  </div>
+  <h4 class="card-title">{{movie.Title}}</h4>
+  <h4>{{movie.Year}}</h4>
+  <div class="card-footer">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal" (click)="editdetails(movie, i)">Edit</button>
+    <button type="button" class="btn btn-success" (click)="deleteMovie( i)">Delete</button>
+  </div>
+</div>
+
+<app-edit-movie [editmovie]="oldata" *ngIf="iseditmodal" [ismodaledit]="iseditmodal" (emitchanges)="updateddata($event)"></app-edit-movie>
+<!-- Button trigger modal -->

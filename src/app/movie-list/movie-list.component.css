@@ -1,0 +1,44 @@
+h3 {
+    color:#ffffff;
+    margin-left: 50px;
+}
+
+ul {
+    float:left;
+}
+
+.card {
+    width:26rem;
+    height:45rem;
+    margin: 25px 12px;
+    float:left;
+    border:1px solid #ffffff;
+    padding:20px;
+}
+
+.card-header {
+    text-align:center;
+}
+
+.card-img-top {
+    width:200px;
+    height:300px;
+}
+
+.card-body {
+    color:#ffffff;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #D40505;
+}
+
+.card-footer {
+    text-align:center;
+}
+
+.btn {
+    margin:5px;
+}
